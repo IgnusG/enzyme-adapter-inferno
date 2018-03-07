@@ -1,5 +1,4 @@
-import Inferno from 'inferno';
-import Component from 'inferno-component';
+import { Component, render } from 'inferno';
 import { expect } from 'chai';
 import jsdom from 'jsdom';
 import InfernoEnzymeAdapter from '../../src/InfernoEnzymeAdapter';
@@ -31,7 +30,7 @@ function cleanNode(node) {
 
 function renderToString(el) {
   document.body.innerHTML = '<div id="test"></div>';
-  Inferno.render(el, document.getElementById('test'));
+  render(el, document.getElementById('test'));
   const tree = document.getElementById('test');
   return tree.innerHTML;
 }
@@ -185,7 +184,7 @@ describe('adapter', () => {
           key: null,
           ref: null,
           instance: null,
-          rendered: ['Hello World!'],
+          rendered: 'Hello World!',
         },
       }));
     });
@@ -222,7 +221,7 @@ describe('adapter', () => {
           key: null,
           ref: null,
           instance: null,
-          rendered: ['Hello World!'],
+          rendered: 'Hello World!',
         },
       }));
     });
@@ -338,16 +337,16 @@ describe('adapter', () => {
                   nodeType: 'host',
                   type: 'span',
                   props: { className: 'Foo2' },
-                  key: '.0',
+                  key: '$0',
                   ref: null,
                   instance: null,
-                  rendered: ['Literal'],
+                  rendered: 'Literal',
                 },
                 {
                   nodeType: 'function',
                   type: Qoo,
                   props: {},
-                  key: '.1',
+                  key: '$1',
                   ref: null,
                   instance: null,
                   rendered: {
@@ -357,7 +356,7 @@ describe('adapter', () => {
                     key: null,
                     ref: null,
                     instance: null,
-                    rendered: ['Hello World!'],
+                    rendered: 'Hello World!',
                   },
                 },
               ],
@@ -458,16 +457,16 @@ describe('adapter', () => {
                   nodeType: 'host',
                   type: 'span',
                   props: { className: 'Foo2' },
-                  key: '.0',
+                  key: '$0',
                   ref: null,
                   instance: null,
-                  rendered: ['Literal'],
+                  rendered: 'Literal',
                 },
                 {
                   nodeType: 'class',
                   type: Qoo,
                   props: {},
-                  key: '.1',
+                  key: '$1',
                   ref: null,
                   instance: null,
                   rendered: {
@@ -477,7 +476,7 @@ describe('adapter', () => {
                     key: null,
                     ref: null,
                     instance: null,
-                    rendered: ['Hello World!'],
+                    rendered: 'Hello World!',
                   },
                 },
               ],
