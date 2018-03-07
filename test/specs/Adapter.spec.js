@@ -184,7 +184,7 @@ describe('adapter', () => {
           key: null,
           ref: null,
           instance: null,
-          rendered: 'Hello World!',
+          rendered: ['Hello World!'],
         },
       }));
     });
@@ -221,7 +221,7 @@ describe('adapter', () => {
           key: null,
           ref: null,
           instance: null,
-          rendered: 'Hello World!',
+          rendered: ['Hello World!'],
         },
       }));
     });
@@ -340,7 +340,7 @@ describe('adapter', () => {
                   key: '$0',
                   ref: null,
                   instance: null,
-                  rendered: 'Literal',
+                  rendered: ['Literal'],
                 },
                 {
                   nodeType: 'function',
@@ -356,7 +356,7 @@ describe('adapter', () => {
                     key: null,
                     ref: null,
                     instance: null,
-                    rendered: 'Hello World!',
+                    rendered: ['Hello World!'],
                   },
                 },
               ],
@@ -460,7 +460,7 @@ describe('adapter', () => {
                   key: '$0',
                   ref: null,
                   instance: null,
-                  rendered: 'Literal',
+                  rendered: ['Literal'],
                 },
                 {
                   nodeType: 'class',
@@ -476,7 +476,7 @@ describe('adapter', () => {
                     key: null,
                     ref: null,
                     instance: null,
-                    rendered: 'Hello World!',
+                    rendered: ['Hello World!'],
                   },
                 },
               ],
